@@ -71,6 +71,12 @@ module.exports = {
           },
         },
       },
+      "forest",
+      "dracula",
+      "dim",
+      "dark",
+      "night",
+      "business",
     ],
   },
   theme: {

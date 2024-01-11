@@ -117,9 +117,11 @@ export const useScaffoldEventHistory = <
   };
 
   useEffect(() => {
-    readEvents(fromBlock);
+    if (!deployedContractLoading) {
+      readEvents(fromBlock);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fromBlock, enabled]);
+  }, [fromBlock, enabled, deployedContractLoading]);
 
   useEffect(() => {
     if (!deployedContractLoading) {
